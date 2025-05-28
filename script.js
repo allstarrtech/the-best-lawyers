@@ -24,3 +24,28 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
+
+//Open/Close Navbar
+const bar = document.getElementById('mobile');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
+
+if (bar) {
+    bar.addEventListener('click', () => {
+        nav.classList.add('active');
+    })
+}
+
+if (close) {
+    close.addEventListener('click', () => {
+        nav.classList.remove('active');
+    })
+}
+
+let btns = document.querySelectorAll(".products button");
+
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", add);
+}
